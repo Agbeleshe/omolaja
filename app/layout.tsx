@@ -2,6 +2,7 @@ import NavBar from "@/components/reuseables/nav-bar";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Footer from "@/components/reuseables/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,7 +33,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <NavBar />
-        <div className="max-w-[100vw] overflow-hidden">{children}</div>
+        <div className="max-w-[100vw] mt-5 overflow-hidden">{children}</div>
+        <Footer />
       </body>
     </html>
   );

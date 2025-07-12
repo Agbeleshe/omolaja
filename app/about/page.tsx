@@ -30,8 +30,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function AboutPage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const achievements = [
     {
       icon: Award,
@@ -69,103 +67,6 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
-      {/* Navigation */}
-      <nav className="bg-white shadow-lg sticky top-0 z-50 backdrop-blur-md bg-white/95">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center group">
-              <Scale className="h-8 w-8 text-blue-600 mr-2 group-hover:rotate-12 transition-transform duration-300" />
-              <span className="text-xl font-bold text-blue-900">
-                O. Agbeleshebioba & Co.
-              </span>
-            </Link>
-
-            {/* Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-8">
-              <Link
-                href="/"
-                className="text-blue-900 hover:text-blue-600 transition-colors font-medium"
-              >
-                Home
-              </Link>
-              <Link href="/about" className="text-blue-600 font-semibold">
-                About
-              </Link>
-              <Link
-                href="/services"
-                className="text-blue-900 hover:text-blue-600 transition-colors font-medium"
-              >
-                Services
-              </Link>
-              <Link
-                href="/booking"
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
-              >
-                Book Consultation
-              </Link>
-              <Link
-                href="/contact"
-                className="text-blue-900 hover:text-blue-600 transition-colors font-medium"
-              >
-                Contact
-              </Link>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <div className="md:hidden">
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-blue-900 hover:text-blue-600 transition-colors"
-              >
-                {isMenuOpen ? (
-                  <X className="h-6 w-6" />
-                ) : (
-                  <Menu className="h-6 w-6" />
-                )}
-              </button>
-            </div>
-          </div>
-
-          {/* Mobile Menu */}
-          {isMenuOpen && (
-            <div className="md:hidden bg-white border-t animate-in slide-in-from-top-2 duration-200">
-              <div className="px-2 pt-2 pb-3 space-y-1">
-                <Link
-                  href="/"
-                  className="block px-3 py-2 text-blue-900 hover:text-blue-600 transition-colors"
-                >
-                  Home
-                </Link>
-                <Link
-                  href="/about"
-                  className="block px-3 py-2 text-blue-600 font-semibold"
-                >
-                  About
-                </Link>
-                <Link
-                  href="/services"
-                  className="block px-3 py-2 text-blue-900 hover:text-blue-600 transition-colors"
-                >
-                  Services
-                </Link>
-                <Link
-                  href="/booking"
-                  className="block px-3 py-2 text-blue-900 hover:text-blue-600 transition-colors"
-                >
-                  Book Consultation
-                </Link>
-                <Link
-                  href="/contact"
-                  className="block px-3 py-2 text-blue-900 hover:text-blue-600 transition-colors"
-                >
-                  Contact
-                </Link>
-              </div>
-            </div>
-          )}
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -222,17 +123,16 @@ export default function AboutPage() {
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
                   Barrister Omolaja Agbeleshe is a highly respected legal
-                  practitioner with over 15 years of experience serving clients
+                  practitioner with over 20 years of experience serving clients
                   across Nigeria and internationally. As a qualified Barrister
                   and Solicitor of the Supreme Court of Nigeria, he has built a
                   reputation for excellence in immigration law, property
                   development, and human rights advocacy.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  His dedication to justice and human rights has earned him the
-                  distinguished title of "Minister of Justice in the Temple of
-                  Humanity," reflecting his unwavering commitment to social
-                  justice and the protection of human dignity.
+                  His has a firm dedication to justice and human rights and an
+                  unwavering commitment to social justice and the protection of
+                  human dignity.
                 </p>
               </div>
 
@@ -411,12 +311,12 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent className="p-6">
                 <p className="text-gray-700 leading-relaxed">
-                  To provide exceptional legal services that protect our
-                  clients' rights and interests while promoting justice,
-                  equality, and human dignity. We are committed to delivering
-                  personalized, professional, and effective legal solutions that
-                  make a positive impact in our clients' lives and the broader
-                  Nigerian society.
+                  To provide exceptional legal services that protect our clients
+                  rights and interests while promoting justice, equality, and
+                  human dignity. We are committed to delivering personalized,
+                  professional, and effective legal solutions that make a
+                  positive impact in our clients lives and the broader Nigerian
+                  society.
                 </p>
               </CardContent>
             </Card>
@@ -464,7 +364,7 @@ export default function AboutPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-blue-900 transition-colors"
+                className="border-white text-blue-500 hover:bg-white hover:text-blue-900 transition-colors"
               >
                 Contact Us Today
               </Button>
@@ -472,95 +372,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-blue-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center mb-4">
-                <Scale className="h-8 w-8 text-blue-300 mr-2" />
-                <span className="text-xl font-bold">
-                  O. Agbeleshebioba & Co.
-                </span>
-              </div>
-              <p className="text-blue-100 mb-4">
-                Professional legal services with integrity, expertise, and
-                dedication to justice.
-              </p>
-              <div className="flex space-x-2">
-                <Badge variant="secondary">🇳🇬 Nigerian Law Firm</Badge>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-blue-100">
-                <li>
-                  <Link
-                    href="/about"
-                    className="hover:text-white transition-colors"
-                  >
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services"
-                    className="hover:text-white transition-colors"
-                  >
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/booking"
-                    className="hover:text-white transition-colors"
-                  >
-                    Book Consultation
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact"
-                    className="hover:text-white transition-colors"
-                  >
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Legal Services</h4>
-              <ul className="space-y-2 text-blue-100">
-                <li>Immigration & Visa Services</li>
-                <li>Property Development</li>
-                <li>Human Rights Advocacy</li>
-                <li>Corporate Law</li>
-                <li>Legal Consultation</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-              <ul className="space-y-2 text-blue-100">
-                <li>📍 Lagos, Nigeria</li>
-                <li>📞 +234 (0) 123 456 7890</li>
-                <li>✉️ info@agbeleshelaw.com</li>
-                <li>🕒 Mon-Fri: 9AM-6PM</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-blue-700 mt-8 pt-8 text-center">
-            <p className="text-blue-100 text-sm">
-              © 2024 O. Agbeleshebioba & Co.. All rights reserved. | Barrister
-              Omolaja Agbeleshe - Licensed Legal Practitioner in Nigeria
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
