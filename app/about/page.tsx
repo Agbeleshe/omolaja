@@ -28,6 +28,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { PracticingLicenseCard } from "@/components/reuseables/PracticingLicenseCard";
 
 export default function AboutPage() {
   const achievements = [
@@ -57,12 +58,14 @@ export default function AboutPage() {
   ];
 
   const qualifications = [
-    "Barrister and Solicitor of the Supreme Court of Nigeria",
-    "Minister of Justice in the Temple of Humanity",
-    "Certified Immigration Law Specialist",
-    "Property Development Legal Consultant",
-    "Human Rights Advocacy Certification",
+    "Bachelor of Laws (LL.B), University of Jos",
+    "Barrister-at-Law (B.L), Nigerian Law School",
+    "Postgraduate Diploma in Management (PGDM), Abubakar Tafawa Balewa University, Bauchi",
     "Corporate Law Practice License",
+    "Certified Immigration Law Specialist",
+    "Member of the Nigerian Bar Association (NBA)",
+    "Member of the International Bar Association (IBA)",
+    "Certified Mediator and Arbitrator",
   ];
 
   return (
@@ -70,7 +73,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/5668882/pexels-photo-5668882.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/dlctwbems/image/upload/v1752511391/IMG_7730_xoopup.jpg')] bg-cover bg-center opacity-10"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-in fade-in-50 slide-in-from-bottom-10 duration-1000">
@@ -100,13 +103,13 @@ export default function AboutPage() {
             <div className="animate-in fade-in-50 slide-in-from-left-10 duration-1000">
               <div className="relative">
                 <Image
-                  src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop"
+                  src="https://res.cloudinary.com/dlctwbems/image/upload/v1752511395/IMG_7724_im7kxk.jpg"
                   alt="Barrister Omolaja Agbeleshe"
                   width={500}
                   height={600}
                   className="rounded-lg shadow-xl"
                 />
-                <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white p-6 rounded-lg shadow-lg">
+                <div className="absolute -bottom-6 -left-6 bg-blue-600 text-white p-6 rounded-lg shadow-lg">
                   <div className="text-center">
                     <div className="text-2xl font-bold">20+</div>
                     <div className="text-sm">Years Experience</div>
@@ -130,9 +133,10 @@ export default function AboutPage() {
                   development, and human rights advocacy.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  His has a firm dedication to justice and human rights and an
+                  His firm dedication to justice and human rights, alongside his
                   unwavering commitment to social justice and the protection of
-                  human dignity.
+                  human dignity, has solidified his title as a “Minister of
+                  Justice in the Temple of Humanity.”
                 </p>
               </div>
 
@@ -293,6 +297,13 @@ export default function AboutPage() {
                         </p>
                       </div>
                     </div>
+
+                    <Link href="/booking">
+                      <Button className="bg-blue-600 hover:bg-blue-700 transition-colors mt-9">
+                        <Calendar className="mr-2 h-5 w-5" />
+                        Schedule a Consultation
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
@@ -300,6 +311,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      {/* Praccing License */}
+      <PracticingLicenseCard />
 
       {/* Mission & Vision */}
       <section className="py-16 bg-blue-50">
@@ -327,7 +340,7 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent className="p-6">
                 <p className="text-gray-700 leading-relaxed">
-                  To be the leading law firm in Nigeria, recognized for our
+                  To be a leading law firm in Nigeria, recognized for our
                   expertise in immigration law, property development, and human
                   rights advocacy. We envision a society where justice is
                   accessible to all, human rights are protected, and legal

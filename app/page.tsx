@@ -25,6 +25,8 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import HeroSection from "@/components/reuseables/hero-section";
+import scale from "@/public/scale.png";
+import { PracticingLicenseCard } from "@/components/reuseables/PracticingLicenseCard";
 
 export default function HomePage() {
   return (
@@ -182,15 +184,25 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <Image
-                src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="https://res.cloudinary.com/dlctwbems/image/upload/v1752511452/IMG_7733_gnrbdl.jpg"
                 alt="Lagos Legal Services"
                 width={600}
                 height={400}
                 className="rounded-lg shadow-lg"
               />
               <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white p-4 rounded-lg shadow-lg">
-                <p className="font-bold">Based in Lagos</p>
-                <p className="text-sm">Serving All Nigeria</p>
+                <p className="font-bold">Based in Lagos </p>
+                <p className="text-sm">sub-branch Abeokuta</p>
+              </div>
+
+              <div className="absolute left-0 top-0 md:top-10 md:left-10 ">
+                <Image
+                  src={scale}
+                  alt="scale"
+                  width={100}
+                  height={100}
+                  className=" mt-4 h-16 w-16 md:h-16 md:w-16"
+                />
               </div>
             </div>
 
@@ -288,9 +300,39 @@ export default function HomePage() {
                   ))}
                 </div>
                 <p className="text-gray-700 mb-4">
-                  Barrister Agbeleshe handled my Canadian visa application with
-                  exceptional professionalism. His knowledge of immigration law
-                  is outstanding!
+                  Barrister Agbeleshe efficiently handled our company’s
+                  expatriate quarterly returns and visa regularisations. His
+                  professionalism, attention to detail, and timely delivery made
+                  the entire process smooth. We confidently recommend his
+                  services.
+                </p>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                    S
+                  </div>
+                  <div className="ml-3">
+                    <p className="font-semibold text-blue-900">Sun Chinko</p>
+                    <p className="text-sm text-gray-600">China</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 text-yellow-400 fill-current"
+                    />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-4">
+                  Barrister Agbeleshe provided legal services and expert counsel
+                  on immigration matters for our company, Shashi Industries. His
+                  guidance was clear and dependable, ensuring compliance and
+                  peace of mind throughout the process.
                 </p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
@@ -298,67 +340,40 @@ export default function HomePage() {
                   </div>
                   <div className="ml-3">
                     <p className="font-semibold text-blue-900">
-                      Adebayo Johnson
+                      Apratim Bhattacharjee
+                    </p>
+                    <p className="text-sm text-gray-600">India</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 text-yellow-400 fill-current"
+                    />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-4">
+                  Barrister Agbeleshe has been handling my property in Lagos
+                  since 2005, for over 20 years with unwavering honesty,
+                  transparency, and professionalism. His integrity and
+                  dedication have earned my complete trust and highest
+                  recommendation.
+                </p>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                    A
+                  </div>
+                  <div className="ml-3">
+                    <p className="font-semibold text-blue-900">
+                      Abiola Babalola Joseph
                     </p>
                     <p className="text-sm text-gray-600">Lagos, Nigeria</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 text-yellow-400 fill-current"
-                    />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-4">
-                  Excellent property law services. He guided us through our real
-                  estate investment in Lekki with great expertise and care.
-                </p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
-                    M
-                  </div>
-                  <div className="ml-3">
-                    <p className="font-semibold text-blue-900">
-                      Mrs. Folake Okafor
-                    </p>
-                    <p className="text-sm text-gray-600">Abuja, Nigeria</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 text-yellow-400 fill-current"
-                    />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-4">
-                  A true advocate for justice. His human rights work has made a
-                  significant impact in our community. Highly recommended!
-                </p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
-                    O
-                  </div>
-                  <div className="ml-3">
-                    <p className="font-semibold text-blue-900">
-                      Olumide Adebayo
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      Port Harcourt, Nigeria
-                    </p>
                   </div>
                 </div>
               </CardContent>
@@ -366,6 +381,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Practicing Licnse */}
+      <PracticingLicenseCard />
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white">

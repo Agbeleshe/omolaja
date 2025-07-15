@@ -62,6 +62,7 @@ export default function ServicesPage() {
         "Comprehensive property legal services across Lagos State and Nigeria",
       features: [
         "Property Documentation",
+        "Property Management",
         "Land Acquisition Support",
         "Title Verification Services",
         "Property Development Consultation",
@@ -84,6 +85,7 @@ export default function ServicesPage() {
         "Gender-Based Violence Support",
         "Community Legal Education",
         "Pro Bono Legal Services",
+        "Legal Representation in Human Rights Cases",
       ],
       price: "Consultation Available",
     },

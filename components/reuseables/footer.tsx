@@ -79,8 +79,8 @@ const Footer = () => {
               <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
               <ul className="space-y-2 text-blue-100">
                 <li>📍 Lagos, Nigeria</li>
-                <li>📞 +234 (0) 123 456 7890</li>
-                <li>✉️ info@agbeleshelaw.com</li>
+                <li>📞 +234 (0) 803 454 0129</li>
+                <li>✉️ agbelesheomolaja@gmail.com</li>
                 <li>🕒 Mon-Fri: 9AM-6PM</li>
               </ul>
             </div>

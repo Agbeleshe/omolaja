@@ -246,7 +246,7 @@ export default function ContactPage() {
                         <h4 className="font-semibold text-blue-900">
                           Phone Numbers
                         </h4>
-                        <p className="text-gray-700">+234 (0) 123 456 7890</p>
+                        <p className="text-gray-700">+234 (0) 803 454 0129</p>
                         <p className="text-sm text-gray-600">
                           Emergency Line: Available 24/7
                         </p>
@@ -257,7 +257,9 @@ export default function ContactPage() {
                       <Mail className="h-6 w-6 text-blue-600 mt-1" />
                       <div>
                         <h4 className="font-semibold text-blue-900">Email</h4>
-                        <p className="text-gray-700">info@agbeleshelaw.com</p>
+                        <p className="text-gray-700">
+                          agbelesheomolaja@gmail.com
+                        </p>
                         <p className="text-sm text-gray-600">
                           We respond within 24 hours
                         </p>
@@ -381,7 +383,7 @@ export default function ContactPage() {
                   <div className="flex items-center space-x-3 mb-4">
                     <Phone className="h-6 w-6 text-red-600" />
                     <span className="text-lg font-semibold text-red-900">
-                      +234 (0) 123 456 7890
+                      +234 (0) 803 454 0129
                     </span>
                   </div>
                   <p className="text-sm text-gray-600">

@@ -398,13 +398,13 @@ export default function BookingPage() {
                     <div className="flex items-center space-x-3">
                       <Phone className="h-5 w-5 text-blue-600" />
                       <span className="text-gray-700">
-                        +234 (0) 123 456 7890
+                        +234 (0) 803 454 0129
                       </span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Mail className="h-5 w-5 text-blue-600" />
                       <span className="text-gray-700">
-                        info@agbeleshelaw.com
+                        agbelesheomolaja@gmail.com
                       </span>
                     </div>
                     <div className="flex items-center space-x-3">

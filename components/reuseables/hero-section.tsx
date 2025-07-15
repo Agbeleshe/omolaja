@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { ArrowRight, Calendar } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -8,27 +9,28 @@ const HeroSection = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-r md:min-h-[100vh]  from-blue-900 via-blue-800 to-blue-700 text-white py-24 overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/5668882/pexels-photo-5668882.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/dlctwbems/image/upload/v1752511430/IMG_7726_y455w1.jpg')] bg-cover bg-center opacity-10"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-in fade-in-50 slide-in-from-bottom-10 duration-1000">
             <div className="mb-6">
-              <Badge className="bg-green-600 text-white mb-4 animate-pulse">
+              {/* <Badge className="bg-green-600 text-white mb-4 animate-pulse">
                 🇳🇬 Proudly Nigerian
-              </Badge>
+              </Badge> */}
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-in fade-in-50 slide-in-from-bottom-10 duration-1000 delay-200">
               Barrister Omolaja Agbeleshe
             </h1>
+            <p className="text-2xl md:text-3xl font-bold mb-6 animate-in fade-in-50 slide-in-from-bottom-10 duration-1000 delay-200">
+              @ O. Agbeleshebioba & Co. (Lord's will chambers)
+            </p>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 animate-in fade-in-50 slide-in-from-bottom-10 duration-1000 delay-400">
-              Expert Legal Services | Immigration Law | Property Development |
-              Human Rights Advocacy
+              Expert In Legal Services | Immigration Laws | Property Consultant
+              | Human Rights Advocate
             </p>
-            <p className="text-lg mb-8 text-blue-200 animate-in fade-in-50 slide-in-from-bottom-10 duration-1000 delay-600">
-              Serving Lagos, Nigeria and Beyond with Excellence and Integrity
-            </p>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in-50 slide-in-from-bottom-10 duration-1000 delay-800">
               <Link href="/booking">
                 <Button
