@@ -9,12 +9,12 @@ const HeroSection = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r md:min-h-[100vh]  from-blue-900 via-blue-800 to-blue-700 text-white py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-r min-h-[100vh] items-center flex align-middle  from-blue-900 via-blue-800 to-blue-700 text-white py-24 overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/dlctwbems/image/upload/v1752511430/IMG_7726_y455w1.jpg')] bg-cover bg-center opacity-10"></div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center animate-in fade-in-50 slide-in-from-bottom-10 duration-1000">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+          <div className="text-center animate-in fade-in-50 slide-in-from-bottom-10 duration-1000 h-full">
             <div className="mb-6">
               {/* <Badge className="bg-green-600 text-white mb-4 animate-pulse">
                 🇳🇬 Proudly Nigerian

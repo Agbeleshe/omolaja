@@ -2,9 +2,21 @@
 import { Menu, Scale, X } from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (path: string) =>
+    pathname === path
+      ? "font-semibold text-blue-900"
+      : "font-medium text-blue-900";
+
+  const handleMobileLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <div>
       {/* Navigation */}
@@ -22,26 +34,33 @@ const NavBar = () => {
             <div className="hidden md:flex items-center space-x-8">
               <Link
                 href="/"
-                className="text-blue-900 hover:text-blue-600 transition-colors font-medium"
+                className={`${isActive(
+                  "/"
+                )} hover:text-blue-600 transition-colors`}
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="text-blue-900 hover:text-blue-600 transition-colors font-medium"
+                className={`${isActive(
+                  "/about"
+                )} hover:text-blue-600 transition-colors`}
               >
                 About
               </Link>
               <Link
                 href="/services"
-                className="text-blue-900 hover:text-blue-600 transition-colors font-medium"
+                className={`${isActive(
+                  "/services"
+                )} hover:text-blue-600 transition-colors`}
               >
                 Services
               </Link>
-
               <Link
                 href="/contact"
-                className="text-blue-900 hover:text-blue-600 transition-colors font-medium"
+                className={`${isActive(
+                  "/contact"
+                )} hover:text-blue-600 transition-colors`}
               >
                 Contact
               </Link>
@@ -72,36 +91,24 @@ const NavBar = () => {
           {isMenuOpen && (
             <div className="md:hidden bg-white border-t animate-in slide-in-from-top-2 duration-200 absolute right-0 left-0 top-16">
               <div className="px-2 pt-2 pb-3 space-y-1">
-                <Link
-                  href="/"
-                  className="block px-3 py-2 text-blue-900 hover:text-blue-600 transition-colors"
-                >
-                  Home
-                </Link>
-                <Link
-                  href="/about"
-                  className="block px-3 py-2 text-blue-900 hover:text-blue-600 transition-colors"
-                >
-                  About
-                </Link>
-                <Link
-                  href="/services"
-                  className="block px-3 py-2 text-blue-900 hover:text-blue-600 transition-colors"
-                >
-                  Services
-                </Link>
-                <Link
-                  href="/booking"
-                  className="block px-3 py-2 text-blue-900 hover:text-blue-600 transition-colors"
-                >
-                  Book Consultation
-                </Link>
-                <Link
-                  href="/contact"
-                  className="block px-3 py-2 text-blue-900 hover:text-blue-600 transition-colors"
-                >
-                  Contact
-                </Link>
+                {[
+                  { href: "/", label: "Home" },
+                  { href: "/about", label: "About" },
+                  { href: "/services", label: "Services" },
+                  { href: "/booking", label: "Book Consultation" },
+                  { href: "/contact", label: "Contact" },
+                ].map(({ href, label }) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    onClick={handleMobileLinkClick}
+                    className={`block px-3 py-2 ${isActive(
+                      href
+                    )} hover:text-blue-600 transition-colors`}
+                  >
+                    {label}
+                  </Link>
+                ))}
               </div>
             </div>
           )}

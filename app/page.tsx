@@ -21,6 +21,7 @@ import {
   ArrowRight,
   Shield,
   Building,
+  PhoneCall,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -399,7 +400,7 @@ export default function HomePage() {
             <Link href="/booking">
               <Button
                 size="lg"
-                className="bg-white text-blue-900 hover:bg-blue-50 transition-colors"
+                className="bg-white text-blue-900 hover:bg-blue-50 transition-colors min-w-[250px]"
               >
                 <Calendar className="mr-2 h-5 w-5" />
                 Book Consultation
@@ -409,8 +410,9 @@ export default function HomePage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-blue-500 hover:bg-white hover:text-blue-900 transition-colors"
+                className="border-white text-blue-500 hover:bg-white hover:text-blue-900 transition-colors min-w-[250px]"
               >
+                <PhoneCall className="mr-2 h-5 w-5" />
                 Contact Us Today
               </Button>
             </Link>
