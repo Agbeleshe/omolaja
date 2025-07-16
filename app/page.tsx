@@ -117,7 +117,7 @@ export default function HomePage() {
             <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
               <div className="relative h-48 overflow-hidden rounded-t-lg">
                 <Image
-                  src="https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="https://www.villaafrika.com/wp-content/uploads/2019/11/homes-in-nigeria.jpg"
                   alt="Property Development"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"

@@ -57,7 +57,7 @@ export default function ServicesPage() {
       title: "Property Development & Law",
       icon: Building,
       image:
-        "https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://www.villaafrika.com/wp-content/uploads/2019/11/homes-in-nigeria.jpg",
       description:
         "Comprehensive property legal services across Lagos State and Nigeria",
       features: [
@@ -110,7 +110,7 @@ export default function ServicesPage() {
       title: "Family Law Services",
       icon: Home,
       image:
-        "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://greyhubng.org/wp-content/uploads/2021/07/happy-african-family.jpg",
       description:
         "Compassionate family law services with cultural sensitivity",
       features: [
